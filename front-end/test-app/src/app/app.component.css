@@ -1,0 +1,9 @@
+.container-fluid {
+    padding: 2rem;
+}
+
+#upper-bar {
+    background: #343a40;
+    color: white;
+    padding: 1.5rem;
+}

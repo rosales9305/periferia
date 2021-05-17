@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="card">
+            <h2> {{cardLabel}} </h2>
+
+            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" formControlName="name" class="form-control" id="name"
+                        placeholder="Product name or description" autocorrect="off" spellcheck="false">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Price</label>
+                    <input type="text" formControlName="price" currencyMask class="form-control" id="name"
+                        placeholder="$0,00" autocorrect="off" spellcheck="false">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Stock</label>
+                    <input type="number" formControlName="stock" class="form-control" id="name" placeholder="Amount of products"
+                        autocorrect="off" spellcheck="false">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Color</label>
+                    <input type="text" formControlName="color" class="form-control" id="name" placeholder="Blue, Red, Green... (not mandatory)"
+                        autocorrect="off" spellcheck="false">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger" (click)="return()">
+                        <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> {{backLabel}} </button>
+
+                    <button type="submit" [disabled]="productForm.invalid" class="btn btn-primary">
+                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

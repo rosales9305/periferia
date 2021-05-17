@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Test.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Test.Api.Controllers.ProductsController">
+            <summary>
+            Product Rest API
+            </summary>
+        </member>
+        <member name="M:Test.Api.Controllers.ProductsController.GetAll">
+            <summary>
+            Get all available products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Test.Api.Controllers.ProductsController.GetById(System.Int32)">
+            <summary>
+            Get an specific product 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Test.Api.Controllers.ProductsController.Post(Test.Shared.DTO.ProductDTO)">
+             <summary>
+             Creates a new product
+             </summary>
+             /// <remarks>
+             Sample request:
+            
+                 POST /Product
+                 {
+                    "id": 0,
+                    "name": "New Product",
+                    "price": 55.9,
+                    "stock": 99,
+                    "color": "Green",
+                 }
+            
+             </remarks>
+             <param name="product"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Test.Api.Controllers.ProductsController.Put(System.Int32,Test.Shared.DTO.ProductDTO)">
+            <summary>
+            Modifies a product based on the given identifier
+            </summary>
+            <param name="id"></param>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Test.Api.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>
+            Deletes a product based on the given identifier
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

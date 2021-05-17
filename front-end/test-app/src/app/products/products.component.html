@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="card">
+            <h2>Products</h2>
+
+            <p-table [value]="products" [columns]="cols" [paginator]="true" [rows]="9" styleClass="p-datatable-striped"
+                [autoLayout]="true">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th *ngFor="let col of cols">
+                            {{col.header}}
+                        </th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData>
+                    <tr>
+                        <td *ngFor="let col of cols">
+                            {{ col.hasSymbol ? (rowData[col.field] | currency) : rowData[col.field]}}
+                        </td>
+                        <td class="action-cell">
+                            <i style="color:#ffcc00" class="fa fa-pencil fa-2x" aria-hidden="true"
+                                (click)="redirect(rowData.id)"></i>
+                            <i style="color:#dc3545" class="fa fa-trash fa-2x" aria-hidden="true"
+                                (click)="deleteProduct(rowData.id)"></i>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+
+            <div>
+                <button id="create-button" type="button" class="btn btn-primary" (click)="redirect()">
+                    <i class="fa fa-plus" aria-hidden="true"></i> Create</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

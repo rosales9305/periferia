@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+ 
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    padding: 2rem 3rem;
+}
+
+.card h2 {
+    border-bottom: 1px solid #323130;
+    padding-bottom: 7px;
+    color: #323130;
+}
+
+.card .btn-primary {
+    background-color: #3669a5;
+    border-color: #3669a5;
+}
+
+.card .btn-primary:hover {
+    background-color: #2c609c;
+    border-color: #2c609c;
+}
+
+.card .btn-primary:focus {
+    box-shadow: none;
+}

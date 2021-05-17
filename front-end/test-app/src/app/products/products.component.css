@@ -1,0 +1,21 @@
+.card th {
+    font-size: 110%;
+}
+
+.card td:last-child {
+    width: 10%;
+}
+
+.action-cell i {
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 160%;
+}
+
+p-table {
+    margin-bottom: 2rem;
+}
+
+#create-button {
+    float: right;
+}
